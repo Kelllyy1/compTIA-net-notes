@@ -1,6 +1,6 @@
 This repo will be dedicated to provide a summary of all of my notes that I have gathered in my preparation for my CompTIA Network+ Certification Study & Attempt.
 
-# How I learn best
+# How I learn best -- My System --
 - Skim the textbook chapter
 - Read through the textbook chapter, as I do this I:
     - add kaywords from each section to my iPad in my note-taking app
