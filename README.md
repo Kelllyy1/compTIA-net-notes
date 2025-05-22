@@ -58,8 +58,18 @@ Defining the topologies that exist, these include bus, star, ring, mesh, hybrid.
 <br>Layer 4   Transport
 <br>Layer 3   Network
 <br>Layer 2   Data Link
-<br>Layer 1    Physical
+<br>Layer 1   Physical
 
+
+# Ethernet at A Glance
+
+## Ethernet Basics
+
+## Ethernet at the Data Link Layer
+
+## Ethernet at the Physical Layer
+
+## Ethernet Standards
 
 
 # Resurces Used
