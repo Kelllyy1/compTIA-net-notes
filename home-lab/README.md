@@ -11,3 +11,6 @@
     - USB-C to RJ45
     - Power Cord C15
     - Cat 5e Ethernet Cables
+
+- Applications
+    - Cisco Packet Tracer 
