@@ -14,3 +14,5 @@
 
 - Applications
     - Cisco Packet Tracer 
+    - VMWare Fusion
+    - PuTTY

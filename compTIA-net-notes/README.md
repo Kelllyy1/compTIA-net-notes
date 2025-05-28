@@ -150,6 +150,9 @@ This is a framework that gives an overview of how the network works in terms of 
 
 
 
+
+
+
 # Ethernet at A Glance
 
 ## Ethernet Basics
