@@ -182,7 +182,7 @@ Common Ports
 | tcp/3389 | RDP |
 | tcp/ 5061 | SIP |
 
-Other Common Ports
+Other Common Protocols
 | Service      | Purpose   |
 | ----      | -------   |
 | ICMP | ping |
@@ -208,12 +208,12 @@ Broadcast - send to all connected devices, 1:A
 
 
 
-
+<!--
 | First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell Expanded too | Content Cell  |
 | Content Cell  | Content Cell With a lot of information  |
-
+-->
 <!--
 # Ethernet at A Glance
 
