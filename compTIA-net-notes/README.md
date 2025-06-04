@@ -9,7 +9,9 @@ This repo will be dedicated to provide a summary of all of my notes that I have 
     - practice the example questions at the end of the chapter and cross-reference the answers in the Appendix
     - brain dump on GitHub after one or a few chapters
     - take a practice test every other day to track progress
+---
 
+# Objective 1
 ## Network Types
 Defining the types of networks that exist, these include LAN, MAN, WAN, PAN, CAN, SAN, SDWAN, mGRE, MLPS
 
@@ -198,6 +200,104 @@ Multicast - simultaneous, 1:M,
 Anycast - send signals to IP addresses with multipe endpoints
 Broadcast - send to all connected devices, 1:A  
 
+---
+# Objective 2
+
+## 1 - Static Routing
+    Statuic routing allows us network administrators to manually configure routing tables, or to manually configure routes between devices.
+    This is best for small networks with few changes. This is not a scalable solution.
+
+## 2 - Dynamic Routing
+    This is better for larger networks and allows for scaling and dynamic routing, or automatic routing of network traffic with the use of a dynamic protocol.
+
+    EIGRP - 
+    OSPF - 
+    BGP - connects an Access Point to the Internet?
+    
+
+## 3 - Routing Technologies
+    Building a routing table with RIPv2 & EIGRP
+    RIPv2
+
+    EIGRP
+
+
+## 4 - Network Address Translation
+
+
+## 5 - VLANs and Trunking
+    Normal frame vs. Frame v/ VLAN header added
+    Trunking & its affects
+
+## 6 - Interface Configuration
+    Ethernet
+    Switches
+    Packet Transmission
+
+
+## 7 - Spanning Tree Protocol
+    Root Port
+    Designated Port
+    Blocked Port
+    RSTP
+
+
+## 8 - Wireless Technologies
+    Common Frequencies
+    Band steering
+    DFS
+    TPC
+
+
+## 9 - Wireless Networking
+    IBSS
+    SSID
+    BSSID
+    ESSID
+    Captive portal
+    Security modes
+        Open System
+        PSK
+        Enterprise
+        Personal
+        CAPWAP
+
+
+## 10 - Network Types
+    Wireless Mesh
+    Point-to-point
+    Ad-hoc
+
+
+## 11 - Wireless Encryption
+    WEP
+    WPA
+    WPA2
+    WPA3
+    WPA-CCIE (or something lke that from Dion's practice exam)
+
+
+## 12 - Installing Networks
+    Distribution frame
+    MDF
+    IDF
+    Equipment Racks
+    Patch panel
+    Cooling (of the data center)
+
+
+## 13 - Power
+    UPS
+    PDU
+
+
+## 14 - Environmental Factors (Things to consider)
+    Humidity
+    Equipment temperatures
+    Fire suppression
+    
+
+TODO: Put this in the right place, after reviwing
 ## Wireless Networking Ethernet Protocols
 802.11a, 802.11b,
 802.11g,
@@ -206,7 +306,48 @@ Broadcast - send to all connected devices, 1:A
 802.11ax,
 802.11be
 
+---
+# Objective 3
 
+## Network Documentation
+
+---
+# Objective 5
+
+## Network Troubleshooting
+When troubleshooting an issue with the network, the following steps can be taken to ge to the bottom of it and solve the issue at hand. Here is the guideline:
+1. Identify the problem - try to duplicate the problem, ask the user questions, identify changes that ocurred recently, break the problem down.
+2. Establish a theory - Occam's razor; consider everything, follow a top down approach to pinppoint the possible problem.
+3. Test the theory - create steps based on the theory and execute them.
+4. Evaluate the results -  if the desired result isn't achieved, redo step 2 and establish a new theory. Else, move on to the next step.
+5. Establish a plan - we want to prevent the issue from happening again, so it's imortant to design a plan to integrate the change into our system.
+6. Implement the plan - carry out the plan like a boss.
+7. Verify full system functionality - ensure the system works as expected and that the issue is gone.
+8. Document the findings - document the initial problem, the process followed and changes made for future reference.
+
+## Cable Issues
+- Fiber mismatching: different cables server different purposes and offer different metrics, so it's important to use the right cablefor the right situation to avoid underperformance or unexpected behavior.
+- Use a cable tester to troubleshoot cabling issues.
+- Crosstalk is a common issue - this is when signals from one cable interfere with signals in another cable.
+    - NEXT measured at the transmitted end
+    - FEXT - measured at the opposite end of transmission
+    - AXT - alient, when other cables interfere
+    - ACR - attenuation to crosstalk ratio - a comparison of signal loss over distance to crosstalk. SNR (signal to noise ratio)
+
+    Troubleshooting for crosstalk:
+    - issue could be at the crimp
+    - adding twists could help
+    - wire separation could help
+    - use careful cable handling
+    - test the SNR after installation
+
+- Cable termination - ensure that the connection is correct.
+
+## Interface Issues
+SNPM - Simple Network Management Protocol - used to look at statistics for networking devices.
+
+## Hardware Issues
+Transcievers sometimes have issues. We should make sure that it matches with the correct cable and wavelength to avoid attenuation, and also supply the right power.
 
 <!--
 | First Header  | Second Header |
