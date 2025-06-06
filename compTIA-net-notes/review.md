@@ -33,5 +33,5 @@ Common commands used in the terminal for networking:
     route
     telnet
     hostname
-    show config     show router         show arp        show mac-address-table  show interface (show ip interface???)   (iperf3 - optional) traceroute      nslookup/dig        tcpdump         
+    show config     show router         show arp        show mac address-table  show interface (show ip interface???)   (iperf3 - optional) traceroute      nslookup/dig        tcpdump         
     ipconfig /flushdns
