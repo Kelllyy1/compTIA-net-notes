@@ -23,3 +23,15 @@ TAP - Tap into the wire, passively view and analyse the traffic without disrupti
 NAC - NEtwork Access Control a bouncer at a network party, stops unauthorized devies form gaining access to the network
 
 DMZ - Demilitarized Zone 
+
+SOA - Start of Authority - this resource record indicates which Domain Name Server (DNS) is the best source of information for the specified domain.
+
+Common commands used in the terminal for networking:
+    nmap    + different flags
+    nslookup
+    arp
+    route
+    telnet
+    hostname
+    show config     show router         show arp        show mac-address-table  show interface (show ip interface???)   (iperf3 - optional) traceroute      nslookup/dig        tcpdump         
+    ipconfig /flushdns

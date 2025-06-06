@@ -210,9 +210,187 @@ Broadcast - send to all connected devices, 1:A
 ## 2 - Dynamic Routing
     This is better for larger networks and allows for scaling and dynamic routing, or automatic routing of network traffic with the use of a dynamic protocol.
 
-    EIGRP - 
-    OSPF - 
-    BGP - connects an Access Point to the Internet?
+    1. RIP (Routing Information Protocol)
+    Type: Distance-Vector
+    IGP: Yes
+    Port: UDP 520
+    Version: RIP v2 (supports CIDR and multicasting)
+
+    - How It Works:
+    Sends entire routing table every 30 seconds to neighbors.
+
+    Chooses the route with the fewest hops (max = 15 hops).
+
+    If a route has 16 hops, it’s considered unreachable.
+
+    - Metric: Hop Count
+    Each router between source and destination adds +1.
+
+    Fewer hops = preferred.
+
+    - Administrative Distance: 120
+    (Least trustworthy of the major protocols)
+
+    - Strengths:
+    Simple to configure.
+
+    Works in small networks.
+
+    - Weaknesses:
+    Slow convergence.
+
+    No loop prevention, limited scalability.
+
+    2. OSPF (Open Shortest Path First)
+    Type: Link-State
+    IGP: Yes
+    Port: IP protocol 89
+
+    - How It Works:
+    Each router builds a complete map of the network (called an LSDB).
+
+    Uses Dijkstra’s algorithm (Shortest Path First) to choose the best path.
+
+    - Metric: Cost
+    Cost = 100 Mbps / interface bandwidth
+
+    So faster interfaces (like Gigabit) have lower cost.
+
+    - Administrative Distance: 110
+    - Strengths:
+    Scalable, efficient, fast convergence.
+
+    Loop prevention built-in.
+
+    Supports areas for logical grouping (Area 0 = backbone).
+
+    - Weaknesses:
+    More complex to configure.
+
+    Needs proper area design.
+
+    3. EIGRP (Enhanced Interior Gateway Routing Protocol)
+    Type: Advanced Distance-Vector (Hybrid)
+    IGP: Yes
+    Port: 88 (Cisco proprietary)
+
+    - How It Works:
+    Cisco’s hybrid protocol using DUAL algorithm.
+
+    Supports equal-cost and unequal-cost load balancing.
+
+    - Metric: Composite of:
+    Bandwidth
+
+    Delay
+
+    Reliability
+
+    Load
+
+    (Default = bandwidth + delay only)
+
+    - Administrative Distance:
+    90 for internal EIGRP
+
+    170 for external EIGRP
+
+    - Strengths:
+    Fast convergence
+
+    Loop-free via Feasible Successors
+
+    Summarization and VLSM support
+
+    - Weaknesses:
+    Cisco-only (unless using EIGRP over IP protocol 88 on newer multi-vendor networks)
+
+    4. BGP (Border Gateway Protocol)
+    Type: Path-Vector
+    EGP: Yes
+    Port: TCP 179
+
+    - How It Works:
+    Used to route between autonomous systems (ISPs, enterprises).
+
+    Exchanges full routing policies (not just paths).
+
+    Builds a path based on AS numbers (autonomous system numbers).
+
+    - Metric: Path attributes, like:
+    AS Path Length (shorter is better)
+
+    Next-hop IP
+
+    Origin type
+
+    MED (Multi-exit discriminator)
+
+    Local preference
+
+    - Administrative Distance:
+    20 (External BGP)
+
+    200 (Internal BGP)
+
+    - Strengths:
+    Essential for internet routing.
+
+    Customizable routing decisions (policies).
+
+    Handles massive routing tables.
+
+    - Weaknesses:
+    Slow convergence
+
+    Complex to configure
+
+    Can be hijacked if not secured
+
+    5. IS-IS (Intermediate System to Intermediate System)
+    Type: Link-State
+    IGP: Yes
+    Port: None (runs directly over Layer 2, not IP-based)
+
+    - How It Works:
+    IS-IS is a link-state routing protocol, similar to OSPF, but uses CLNS (Connectionless Network Service) for communication rather than IP.
+
+    Routers running IS-IS build a complete topological database (like OSPF’s LSDB).
+
+    Uses Dijkstra’s Shortest Path First (SPF) algorithm to calculate routes.
+
+    Divides the network into levels:
+
+    Level 1: Intra-area routing (within a domain)
+
+    Level 2: Inter-area routing (between domains)
+
+    Supports hierarchical routing like OSPF (with Areas), but is more flexible in large, scalable environments (like carrier networks).
+
+    - Metric: Cost
+    Cost is assigned manually or automatically based on interface speed.
+
+    Lower cost = preferred path (just like OSPF).
+
+    - Administrative Distance:
+    115 (default in Cisco)
+
+    - Strengths:
+    Highly scalable, used by ISPs and service providers.
+
+    Protocol-independent: supports IPv4, IPv6, and non-IP protocols.
+
+    Runs directly over Layer 2, so it doesn’t rely on IP to operate.
+
+    Often preferred over OSPF in very large networks.
+
+    - Weaknesses:
+    Less familiar to enterprise engineers (OSPF more common in corporate settings).
+
+    Slightly more complex syntax and terminology.
+
+    Can be confusing due to CLNS background.
+    [Courtesy of ChatGPT for the dynamic routing protocol explanations]
     
 
 ## 3 - Routing Technologies
