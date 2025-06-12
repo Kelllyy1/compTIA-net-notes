@@ -35,3 +35,8 @@ Common commands used in the terminal for networking:
     hostname
     show config     show router         show arp        show mac address-table  show interface (show ip interface???)   (iperf3 - optional) traceroute      nslookup/dig        tcpdump         
     ipconfig /flushdns
+
+
+---
+
+Site survey - physcially walking through the network looking at strong signals and bad areas. Best first step for detemrining est place to put access points (AP).
