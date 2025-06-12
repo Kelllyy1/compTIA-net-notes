@@ -33,3 +33,6 @@
 
     - Drivers - I run Windows 10 on VmWare, so FTDI allows me to see available COM Ports when I connect USB devices to my host OS
         - FTDI Drviers Windows 10: https://ftdichip.com/drivers/    (Virtual COM Port)
+
+    - Raspberry Pi 4
+        - Raspbian: https://www.raspberrypi.com/software/ [os for Raspberry Pi]
